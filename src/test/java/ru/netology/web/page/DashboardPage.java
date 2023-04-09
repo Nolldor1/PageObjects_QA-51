@@ -20,7 +20,7 @@ public class DashboardPage {
     }
 
     public int getCardBalance(DataHelper.CardInfo cardInfo) {
-        var text = cards.find(text(cardInfo.getCardNumber().substring(15))).getText();
+        var text = cards.findBy(text(cardInfo.getCardNumber().substring(15))).getText();
         return extractBalance(text);
     }
 

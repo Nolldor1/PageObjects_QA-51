@@ -40,6 +40,7 @@ public class MoneyTransferTest {
 
 
     }
+
     @Test
     void shouldGetErrorMessageIfAmountNotEnough() {
         var firstCardInfo = getFirstCardInfo();
