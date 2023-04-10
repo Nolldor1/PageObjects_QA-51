@@ -32,12 +32,14 @@ public class DataHelper {
     public static int generateInvalidAmount(int balance) {
         return Math.abs(balance) + new Random().nextInt(10000);
     }
+
     @Value
     public static class AuthInfo {
         private String login;
         private String password;
 
     }
+
     @Value
     public static class VerificationCode {
         private String code;
@@ -45,8 +47,8 @@ public class DataHelper {
 
     @Value
     public static class CardInfo {
-        String cardNumber;
-        String id;
+        private String cardNumber;
+        private String id;
     }
 }
 

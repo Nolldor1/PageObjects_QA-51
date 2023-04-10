@@ -37,10 +37,7 @@ public class MoneyTransferTest {
         var actualBalanceSecondCard = dashboardPage.getCardBalance(secondCardInfo);
         assertEquals(expectedBalanceFirstCard, actualBalanceFirstCard);
         assertEquals(expectedBalanceSecondCard, actualBalanceSecondCard);
-
-
     }
-
     @Test
     void shouldGetErrorMessageIfCardAmountNotEnough() {
         var firstCardInfo = getFirstCardInfo();
