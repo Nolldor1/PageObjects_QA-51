@@ -12,7 +12,7 @@ public class DashboardPage {
     private static final ElementsCollection cards = $$(".list__item div");
     private final SelenideElement heading = $("[data-test-id=dashboard]");
     private final String balanceStart = "баланс: ";
-    private final String balanceFinish = " p.";
+    private final String balanceFinish = " р.";
 
     public DashboardPage() {
 
@@ -20,7 +20,7 @@ public class DashboardPage {
     }
 
     public int getCardBalance(DataHelper.CardInfo cardInfo) {
-        var text = cards.findBy(text(cardInfo.getCardNumber().substring(15))).getText();
+        var text = cards.find(text(cardInfo.getCardNumber().substring(15))).getText();
         return extractBalance(text);
     }
 
